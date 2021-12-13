@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadena Tienda Genérica</title>
+
+
+</head>
+
+<body>
+    <div class="container start-h center-v">
+
+        <code><h2>Cadena de Tiendas La Genérica P</h2> <br></code>
+
+    </div>
+    <style type="text/css">
+        body {
+            background-color: rgb(8, 8, 8)
+        }
+        
+        h1 {
+            background-color: #ffffff
+        }
+        
+        h2 {
+            background-color: transparent
+        }
+        
+        p {
+            background-color: rgb(255, 255, 255)
+        }
+    </style>
+    <style>
+        .container {
+            background: #578cd1;
+            margin: 0 0 0rem;
+            height: 5rem;
+            display: flex;
+            align-items: start;
+        }
+        
+        .producto {
+            background: #578cd1;
+            margin: 0 0 2rem;
+            height: 5rem;
+            display: flexbox;
+            align-items: start;
+        }
+        
+        .center-h {
+            justify-content: center;
+        }
+        
+        .center-v {
+            align-items: center;
+        }
+        
+        .child2 {
+            background: #60e0b0;
+            padding: .2rem;
+        }
+        
+        .validar {
+            background: #bed8ff;
+            padding: .2rem;
+            margin: 0 0 1rem;
+            height: 35rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+    <div class="producto">
+        <div> <input type="submit" value="Productos">
+        </div>
+        <div class="validar center-h center-v">
+        <div th:if="${param.error}">  
+            Invalid username and password.
+        </div>
+	    <div th:if="${param.logout}">  
+            You have been logged out.
+        </div>
+            <form th:action="@{/login}" method="post">
+             <h2>Acceso al sistema</h2>
+                <div>
+                    <div> Usuario </div>
+                    <div> <input type="text" name="username" autofocus required> </div>
+                </div>
+                <div><div></div><div></div></div>
+                <div><div></div><div></div></div>
+                <div><div></div><div></div></div>
+                <div><div></div><div></div></div>
+                <div>
+                    <div>Contraseña</div>
+                    <div> <input type="password" name="password" required> </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                    <div> <input type="submit" value="Aceptar"> <input type="submit" value="Cancelar"> </div>
+                </div>
+        </div>
+             </form>
+               
+</body>
+
+</html>
